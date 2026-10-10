@@ -27,5 +27,3 @@ Files
 - `data/*.csv`: generated benchmark inputs
 - `results/*.csv`: actually executed synthetic benchmark outputs and split assignments
 - `results/run_metadata.json`: execution environment and parameters
-
-Do not replace manuscript illustrative results with these numbers without revising the study's methods, limitations, results, and claims.
