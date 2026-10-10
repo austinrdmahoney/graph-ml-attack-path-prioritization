@@ -1,0 +1,17 @@
+{
+  "benchmark_type": "synthetic_simulation_not_real_enterprise_data",
+  "seed": 42,
+  "initial_paths": 1250,
+  "critical_assets": 100,
+  "initially_reachable_critical_assets": 80,
+  "vulnerability_count": 300,
+  "graph_nodes": 570,
+  "graph_edges": 3834,
+  "python": "3.13.5 (main, Jul 15 2026, 20:25:40) [GCC 14.2.0]",
+  "platform": "Linux-6.18.44-x86_64-with-glibc2.41",
+  "numpy": "2.3.5",
+  "sklearn": "1.8.0",
+  "networkx": "3.6.1",
+  "torch": "2.10.0+cpu",
+  "xgboost": "3.1.3"
+}
