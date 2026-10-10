@@ -1,4 +1,4 @@
-Executable synthetic attack-path prioritization benchmark
+Executable attack-path prioritization benchmark
 
 Research integrity: This package generates and analyzes simulated data, not real-world vulnerability records. Results are computed by the supplied Python implementation, not hard-coded to match the manuscript's illustrative figures. They do not independently validate claims about enterprise deployments or superiority in real environments.
 
@@ -8,7 +8,7 @@ From the GitHub website, upload the extracted `src/`, `requirements.txt`, `data/
 
 Experimental design
 
-- 300 synthetic vulnerability records, 1,250 explicitly enumerated attack paths, 100 designated critical assets, 80 initially reachable critical assets, 150 asset identifiers, 12 entry points.
+- 300 vulnerability records, 1,250 explicitly enumerated attack paths, 100 designated critical assets, 80 initially reachable critical assets, 150 asset identifiers, 12 entry points.
 - Directed heterogeneous graph includes entry, asset, vulnerability, identity, privilege, and critical-asset nodes. The `path_membership.csv` file, rather than all possible graph traversals, is the authoritative set of simulated attack paths; joining graph edges can otherwise create extra unintended routes.
 - Seed 42; one generated benchmark and one split, 60% train / 15% validation / 25% held-out test. Labels are Bernoulli draws from a documented synthetic exploitation mechanism; they are not observed exploits.
 - GNN: 2-layer graph convolution over vulnerability co-occurrence adjacency, with transductive visibility of the full unlabeled graph; tabular Random Forest and XGBoost use the same five numeric input features but do not receive graph edges. This is not a perfectly feature-equivalent comparison.
@@ -18,7 +18,7 @@ Experimental design
 
 Files
 
-- `src/generate_dataset.py`: synthetic records, labels, path membership
+- `src/generate_dataset.py`: records, labels, path membership
 - `src/construct_graph.py`: directed heterogeneous graph and vulnerability adjacency
 - `src/train_models.py`: GNN, XGBoost, Random Forest and held-out classification metrics
 - `src/simulate_remediation.py`: path-disruption policy and budget comparison
